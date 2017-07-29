@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var data=require('./data.json');
+app.locals.appdata=require('./data.json');
 app.use('/', index);
 
 
